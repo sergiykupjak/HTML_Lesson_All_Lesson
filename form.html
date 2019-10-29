@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Form Sample</title>
-    <body>
-        <nav>
-        <a xref="index.html">Home Page </a>
-        </nav>
-        <section>
-        <form action="https://formspree.io/mnqabeqn" method="POST">
-            <lable>
-                User Name:
-                <input type="text" placeholder="login" name="User Name" >
-            </lable>
-            <lable>
-            <br>
-                Gender:
-            </lable>
-            <lable>
-            <input type="radio" name="gender" value="Male" >Male
-            </lable>
-            <lable>
-            <input type="radio" name="gender" value="Male" >Female
-            </lable>
-            <lable>
-            <input type="radio" name="gender" value="Male" >Other
-            </lable>
 
-            <br>
-            <input type=submit value=SEND>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Form Sample</title>
 
-        </section>
-    </body>
+<body>
+	<nav>
+		<a href="index.html">Home Page </a>
+		<hr>
+	</nav>
+	<section>
+		<form action="https://formspree.io/mnqabeqn" method="POST">
+			<lable>
+				User Name:<br />
+				<input type="text" placeholder="User Name" name="user-name" />
+      </lable>
+				<br />
+				<lable>
+					Email:<br />
+					<input type="email" placeholder="Email" name="Email" />
+      </lable><br />
+					<div>
+						<label for="msg">Message:<br />
+					<textarea id="msg" name="user_message" cols="17" rows="3"></textarea>
+        </label>
+					</div>
+					<div>
+						<lable>
+							Gender:
+						</lable>
+						<lable> <input type="radio" name="gender" value="Male" />Male </lable>
+							<lable> <input type="radio" name="gender" value="Male" />Female </lable>
+								<lable> <input type="radio" name="gender" value="Male" />Other </lable>
+					</div>
+					<h2>Payment information</h2>
+					<label for="card">
+         <span>Card type:</span>
+      </label>
+					<select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+					<label for="number">
+        <span>Card number:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+					<input type="number" id="number" name="cardnumber">
+					<label for="date">
+      Expiration date:
+        <strong><abbr title="required">*</abbr></strong>
+        <em>formatted as mm/yy</em>
+      </label>
+					<input type="date" id="date" name="expiration">
+					<br>
+					<label for="agree">
+      <label for="horns">Do you agree?
+        <input type="checkbox" id="agree" name="agree">
+      </label>
+					<br>
+    </form>
+
+					<input type=submit value=SEND>
+
+
+
+
+</form>
+	</section>
+</body>
+
 </html>
