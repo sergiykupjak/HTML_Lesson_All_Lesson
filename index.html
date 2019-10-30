@@ -1,138 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-</head>
-
-<body>
-<nav>
-<a href="form.html">Poll </a>
-</nav>
-    <h1>Верхний и нижний индекс</h1>
-    <p>Мой день рождения 25<sup>-го</sup> мая 2001 года.</p>
-    <p>
-      Химическая формула кофеина:
-      C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
-    </p>
-    <p>Если x<sup>2</sup> равно 9, x должен равняться 3 или -3.</p>
-    <hr />
-    <hr />
-    <h1>Ссылки электронной почты</h1>
-    <a href="mailto:sergiykupjak@gmail.com"
-      >Отправить письмо для sergiykupjak</a
-    >
-    <hr />
-    <hr />
-    <h1>Ссылки-блоки</h1>
-    <a
-      href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA"
-    >
+  <head>
+    <link rel="stylesheet" href="lib/style.css" />
+    <script src="lib/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>The New York Times</h1>
+      <nav>
+        <ol>
+          <li>
+            <a href="">News</a>
+            <ul>
+              <li><a href="">Home Page</a></li>
+              <li><a href="">World</a></li>
+              <li><a href="">Sports</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Opinion</a>
+            <ul>
+              <li><a href="">Today's Opinion</a></li>
+              <li><a href="">Op-Ed Columnists</a></li>
+              <li><a href="">Video: Opinion</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Arts</a>
+            <ul>
+              <li><a href="">Today's Arts</a></li>
+              <li><a href="">Art & Design</a></li>
+              <li><a href="">Books</a></li>
+            </ul>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <form>
+      <p>
+        <input type="search" name="q" placeholder="Search" />
+        <input type="submit" value="Search" />
+      </p>
+    </form>
+    <article>
+      <header>
+        <h2>
+          Former G.O.P. Lawmaker Pressed for Ambassador’s Ouster, Diplomat Will
+          Say
+        </h2>
+      </header>
       <img
-        src="data:image/jpeg;base64,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"
-        alt="логотип mozilla со ссылкой на их домашнюю страницу"
+        class="picture"
+        src="https://static01.nyt.com/images/2019/10/30/us/politics/30dc-impeach-sub/30dc-impeach-sub-threeByTwoSmallAt2X-v2.jpg?quality=75&auto=webp&disable=upscale"
+        alt="Former G.O.P. Lawmaker Pressed for Ambassador’s Ouster, Diplomat Will
+          Say"
       />
-    </a>
-    <hr />
-    <hr />
-    <h1>Акцент</h1>
-    <p>I am <em>glad</em> you weren't <em>late</em>.</p>
-    <p>This liquid is <strong>highly toxic</strong>.</p>
-
-    <p>I am counting on you. <strong>Do not</strong> be late!</p>
-    <hr />
-    <hr />
-    <h1>Нумерований вкладений список</h1>
-    <ol>
-      <li>Доехать до конца дороги</li>
-      <li>
-        Поверните направо
-        <ul>
-          <li>молоко</li>
-          <li>яйца</li>
-          <li>хлеб</li>
-          <li>земля</li>
-        </ul>
-      </li>
-      <li>Пройдите прямо через первые два перекрестка с круговым движением</li>
-      <li>Поверните налево на третьем перекрестке</li>
-      <li>Школа находится справа от вас, в 300 метрах вверх по дороге</li>
-    </ol>
-    <hr />
-    <hr />
-    <h1>Ненумерований вкладений список</h1>
-    <ul>
-      <li>
-        Русская кухня
-        <ul>
-          <li>Уха бурлацкая</li>
-          <li>Бабушкина тюря</li>
-          <li>Растегай</li>
-        </ul>
-      </li>
-      <li>Украинская кухня</li>
-      <li>Молдавская кухня</li>
-      <li>Кавказская кухня</li>
-      <li>Прибалтийская кухня</li>
-    </ul>
-    <hr />
-    <hr />
-    <h1>Буквенный символ Символьный эквивалент</h1>
-
-    <p>
-
-    </p>
-    <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
-    <hr />
-    <hr />
-    <h1>Boolean attributes</h1>
-    <input type="text" disabled />
-    <input type="text" />
-    <hr />
-    <hr />
-    <h1>Link</h1>
-    <a
-      href="https://www.mozilla.org/"
-      title="The Mozilla homepage"
-      target="_blank"
-      ><p>A link to my favorite website.</p></a
-    >
-    <hr />
-    <hr />
-    <h1>Вкладені елементи</h1>
-    <p>My cat is <strong>very</strong> grumpy.</p>
-    <hr />
-    <hr />
-    <h1>Блокові та рядкові елементи</h1>
-    <em>перший</em><em>другий</em><em>третій</em>
-    <p>четвертий</p>
-    <p>п'ятий</p>
-    <p>шостий</p>
-    <hr />
-    <hr />
-    <h1>Image</h1>
-  <p><a href="lorem.html"><img src="https://apollo-ireland.akamaized.net/v1/files/oxtevzhctua61-UA/image;s=261x203"
-  width="189" height="255" alt="lorem"></a>
-  Lorem ipsum dolor sit amet...</p>
-    <hr />
-    <hr />
-    <h1>Вкладені елементи</h1>
-    <p>My cat is <strong>very</strong> grumpy.</p>
-    <hr />
-    <hr />
-    <h1>Заголовок1</h1>
-    <br />
-    <h2>Заголовок2</h2>
-    <br />
-    <h3>Заголовок3</h3>
-    <br />
-    <h4>Заголовок4</h4>
-    <br />
-    <hr />
-    <hr />
-</body>
-
+      <p>
+        Former G.O.P. Lawmaker Pressed for Ambassador’s Ouster, Diplomat to Say
+        Robert Livingston, a congressman turned lobbyist, contacted a foreign
+        service officer to criticize the ambassador Marie Yovanovitch, the
+        officer plans to testify. The officer, Catherine M. Croft, will say that
+        she “documented” multiple calls from Mr. Livingston about Ms.
+        Yovanovitch. 2h ago312 comments Robert Livingston, the former Republican
+        congressman, was once a household name in Washington. Robert Livingston,
+        the former Republican congressman, was once a household name in
+        Washington. Paul J. Richards/Agence France-Presse — Getty Images Account
+        of Trump’s
+      </p>
+      <footer>
+        <a href="">#politics</a>.
+        <a href="">129 Coments</a>
+      </footer>
+    </article>
+    <footer>
+      <address>© 2019 The New York Times Company</address>
+      <small>@2019</small>
+    </footer>
+  </body>
 </html>
